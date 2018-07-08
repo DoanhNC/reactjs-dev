@@ -1,8 +1,15 @@
 import React, { Component }
 from 'react';
-
+import Item from './Content/Items';
 class Content extends Component {
+    constructor(props){
+        super(props);
+        console.log('anh doanh', this.props.items);
+        
+    }
     render() {
+        var items = this.props.items.map((val, key) => <Item key={key} val={val} index={key}/>);
+        
         return (
                 <div className="panel">
                         <div className="panel-body">
@@ -17,34 +24,14 @@ class Content extends Component {
                                   <input type="checkbox" />
                                 </th>
                                 <th className="center">&nbsp;</th>
-                                <th>ID</th>
+                                <th>STT</th>
                                 <th>Mã nhóm</th>
                                 <th>Tên nhóm</th>
                                 <th>Trạng thái</th>
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td className="center">
-                                  <input type="checkbox" />
-                                </td>
-                                <td className="tbl-actions center">
-                                  <div className="dropdown">
-                                    <a href="javascript:;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i className="fa fa-bars" /></a>
-                                    <ul className="dropdown-menu">
-                                      <li><a href="javascript:;">Sửa</a></li>
-                                      <li><a href="javascript:;">Xóa</a></li>
-                                    </ul>
-                                  </div>
-                                </td>
-                                <td>1</td>
-                                <td>anc222</td>
-                                <td><a href="javascript:;" className="btn-link">Nguyễn văn a</a></td>
-                                <td>
-                                  <span className="label label-table label-success">Hoạt động</span>
-                                  <span className="label label-table label-default">Không hoạt động</span>
-                                </td>
-                              </tr>
+                            {items}
                             </tbody>
                           </table>
                         </div>

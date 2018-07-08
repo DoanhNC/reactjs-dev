@@ -5,17 +5,19 @@ class Search extends Component {
     constructor(props){
         super(props);
         this.state = {
-            'strSearch': '123456'
+            'strSearch': ''
         };
         this.btnSearch = this.btnSearch.bind(this);
         this.btnClear = this.btnClear.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
     btnSearch(){
-        console.log('search', this.state.strSearch);  
+        this.props.onClickSearch(this.state.strSearch);
+//        console.log('search', this.state.strSearch);  
     };
     btnClear(){
         this.setState({strSearch: ''});
+        this.props.onClickSearch(this.state.strSearch);
     }
     handleChange(event){
       this.setState({strSearch: event.target.value});

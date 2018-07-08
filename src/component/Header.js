@@ -16,7 +16,7 @@ class Header extends Component {
                                 <li><a href="#">Page 1</a></li>
                                 <li><a href="#">Page 2</a></li>
                             </ul>
-                            <Search/>
+                            <Search onClickSearch={this.props.onClickSearch}/>
                         </div>
                     </nav>
                 </div>
