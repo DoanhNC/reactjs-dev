@@ -2,11 +2,12 @@ import React, { Component }
 from 'react';
 import './App.css';
 // fontawesome
-import '../node_modules/font-awesome/css/font-awesome.min.css'; 
+import 'font-awesome/css/font-awesome.min.css'; 
 import Header from './component/Header';
 import Footer from './component/Footer';
 import Content from './component/Content';
 import items from './data/data';
+import _ from 'lodash';
 
 class App extends Component {
     constructor(props) {
@@ -23,13 +24,17 @@ class App extends Component {
         });
     }
     render() {
+        let search = this.state.strSearch;
+//        this.state.items = _.filter(this.state.items, function(o) {
+//            return _.includes(o.nameGroup, search);
+//        });
         return (
                 <div className="App">
                     <Header onClickSearch={this.handleSearch}/>
                     <Content items={this.state.items}/>
                     <Footer/>
                 </div>
-                );
+              );
     }
 }
 

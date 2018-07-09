@@ -13,7 +13,6 @@ class Search extends Component {
     }
     btnSearch(){
         this.props.onClickSearch(this.state.strSearch);
-//        console.log('search', this.state.strSearch);  
     };
     btnClear(){
         this.setState({strSearch: ''});

@@ -7,7 +7,7 @@ var items = [
         {
             codeGroup: 'CD02',
             nameGroup: 'Khoa học môi trường',
-            status: true
+            status: false
         },
         {
             codeGroup: 'CD03',
