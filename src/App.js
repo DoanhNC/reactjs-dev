@@ -3,6 +3,7 @@ from 'react';
 import './App.css';
 // fontawesome
 import 'font-awesome/css/font-awesome.min.css'; 
+import 'react-bootstrap-modal/lib/css/rbm-patch.css'; 
 import Header from './component/Header';
 import Footer from './component/Footer';
 import Content from './component/Content';
