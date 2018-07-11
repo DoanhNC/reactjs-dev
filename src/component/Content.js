@@ -8,10 +8,12 @@ class Content extends Component {
         this.handleToggle = this.handleToggle.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.save = this.save.bind(this);
+        this.removeItem = this.removeItem.bind(this);
         this.state = {
             'isShowModal' : false
         };
     };
+    // modal
     handleToggle(){
         this.setState({
             'isShowModal' : true
@@ -27,8 +29,13 @@ class Content extends Component {
 //            'isShowModal' : false
 //        });
     } 
+    // action
+    removeItem(index){
+        this.props.items.splice(index, 1);
+        this.setState(this.state);
+    }
     render() {
-        var items = this.props.items.map((val, key) => <Item key={key} val={val} index={key}/>);
+        var items = this.props.items.map((val, key) => <Item key={key} val={val} index={key} removeItem={this.removeItem}/>);
         return (
                 <div className="panel">
                         <div className="panel-body">
