@@ -1,2 +1,3 @@
-https://www.npmjs.com/package/react-bootstrap-modal   -- bootstrap modal reactjs
-https://www.youtube.com/watch?v=zcpyOwPdIYg&list=PLzrVYRai0riQFEN586LOz3eMv2Rgy6WXS   -- reactjs redux
+bootstrap modal reactjs : https://www.npmjs.com/package/react-bootstrap-modal 
+reactjs redux : https://www.youtube.com/watch?v=zcpyOwPdIYg&list=PLzrVYRai0riQFEN586LOz3eMv2Rgy6WXS
+cmd : npm install redux --save 
