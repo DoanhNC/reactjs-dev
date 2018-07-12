@@ -25,9 +25,15 @@ class Content extends Component {
         });
     } 
     save(){
-//        this.setState({
-//            'isShowModal' : false
-//        });
+        var codeGroup = this.refs.codeGroup.value;
+        var nameGroup = this.refs.nameGroup.value;
+        var data = {
+          codeGroup: codeGroup,  
+          nameGroup: nameGroup,
+          status: this.refs.status.checked
+        };
+        this.props.items.push(data);
+        this.setState(this.state);
     } 
     // action
     removeItem(index){
@@ -69,14 +75,14 @@ class Content extends Component {
                               <form>
                                 <div className="form-group">
                                   <label htmlFor="codeGroup">Mã nhóm:</label>
-                                  <input type="text" className="form-control" id="codeGroup" />
+                                  <input type="text" className="form-control" id="codeGroup" ref="codeGroup"/>
                                 </div>
                                 <div className="form-group">
                                   <label htmlFor="nameGroup">Tên nhóm:</label>
-                                  <input type="text" className="form-control" id="nameGroup" />
+                                  <input type="text" className="form-control" id="nameGroup" ref="nameGroup" />
                                 </div>
                                 <div className="checkbox">
-                                  <label htmlFor="status"><input type="checkbox" id="status" /> Hoạt động</label>
+                                  <label htmlFor="status"><input type="checkbox" id="status" ref="status" /> Hoạt động</label>
                                 </div>
                               </form>
                             </Modal.Body>
