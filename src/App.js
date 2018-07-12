@@ -38,5 +38,5 @@ class App extends Component {
               );
     }
 }
-
+require('./redux/elements.js');
 export default App;
